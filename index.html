@@ -15,10 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Hind+Siliguri:wght@300;400;500;600;700&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <!-- Font Awosome -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
-     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
-     crossorigin="anonymous" referrerpolicy="no-referrer" 
-     />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Css file link-->
 
         <link rel="stylesheet" href="style/style.css">
@@ -82,9 +79,23 @@
 
         </div>
     </section>
+    <section id="search-word" class="flex justify-center">
+        <div class="join">
+            <div>
+                <label class="input validator join-item">
+                <input id="search-input" type="text" placeholder="search vocabulary" required />
+                </label>
+                <div class="validator-hint hidden">Enter valid email address</div>
+            </div>
+            <button id="btn-search" class="btn btn-primary join-item">Search</button>
+        </div>
+    </section>
+    <section id="spinner-section" class="flex justify-center items-center py-10 hidden">
+            <span class="loading loading-bars loading-xl"></span>
+    </section>
+
     <!--Lessons clicked Section-->
     <section id="word-container" class="bg-gray-100 py-8 w-11/12 mx-auto my-8 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 gap-4 ">
-
         <div class="text-center col-span-full space-y-5">
             <p class="font-bangla text-[#79716B]">আপনি এখনো কোন Lesson Select করেন নি</p>
             <h2 class="font-bangla text-3xl font-semibold">একটি Lesson Select করুন।</h2>
@@ -93,18 +104,18 @@
     </section>
 
     <!-- Open the modal using ID.showModal() method -->
-        <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
         <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-        <div class="modal-box">
-            <h3 class="text-lg font-bold">Hello!</h3>
-            <p class="py-4">Press ESC key or click the button below to close</p>
-            <div class="modal-action">
-            <form method="dialog">
-                <!-- if there is a button in form, it will close the modal -->
-                <button class="btn">Close</button>
-            </form>
+            <div class="modal-box">
+                <div id="word-details-container" class="space-y-5">
+                    
+                </div>
+                <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                </form>
+                </div>
             </div>
-        </div>
         </dialog>
 
     <script src="script/index.js"></script>
